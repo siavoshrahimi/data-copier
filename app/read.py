@@ -1,7 +1,7 @@
 import os
 import pandas as pd
-from dotenv import load_dotenv
-load_dotenv(r"C:\Users\programing\data_engineering\data-copier\dev.env")
+# from dotenv import load_dotenv
+# load_dotenv(r"C:\Users\programing\data_engineering\data-copier\dev.env")
 
 
 def get_json_reader(BASE_DIR, table_name, chunksize = 1000):
@@ -10,7 +10,6 @@ def get_json_reader(BASE_DIR, table_name, chunksize = 1000):
     return pd.read_json(fp, lines=True, chunksize=chunksize)
 
 if __name__ == '__main__':
-    load_dotenv()
     BASE_DIR = os.environ.get('BASE_DIR')
     table_name = os.environ.get('TABLE_NAME')
     json_reader = get_json_reader(BASE_DIR , table_name)

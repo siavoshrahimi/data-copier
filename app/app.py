@@ -3,9 +3,9 @@ import os
 import sys
 from read import get_json_reader
 from write import load_db_table
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
-load_dotenv(r"C:\Users\programing\data_engineering\data-copier\dev.env")
+# load_dotenv(r"C:\Users\programing\data_engineering\data-copier\dev.env")
 
 def process_table(BASE_DIR, conn, table_name):
     json_reader = get_json_reader(BASE_DIR , table_name)
